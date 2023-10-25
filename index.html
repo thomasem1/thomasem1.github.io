@@ -7,10 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas E. Mueller</title>
 
-    <!-- Bootstrap CSS CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 
@@ -19,7 +17,9 @@
 </head>
 
 <body>
-    <aside class="sidebar bg-dark text-white py-4">
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+
+    <aside class="sidebar bg-dark text-white py-4 collapse d-xl-block" id="mobileNav">
         <div class="container">
             <img src="images/CVbild.jpg" alt="Profile Picture"
                 class="profile-image rounded-circle border border-white mb-4">
@@ -61,79 +61,132 @@
             </ul>
         </div>
     </aside>
-
-    <header>
-        <!-- You can add a navbar here -->
-    </header>
+  
+    <section class="hero bg-primary text-white text-center d-flex justify-content-center align-items-center">
+        <div>
+            <h1><span id="typed-output-h1"></span></h1>
+            <p><span id="typed-output-p"></span></p>
+            <a href="#about-me" class="btn btn-light" onclick="smoothScroll(event)">About Me</a>
+        </div>
+    </section>
 
     <div id="main">
-        <section class="hero bg-primary text-white text-center d-flex justify-content-center align-items-center">
-            <div>
-                <h1><span id="typed-output-h1"></span></h1>
-                <p><span id="typed-output-p"></span></p>
-                <a href="#about-me" class="btn btn-light">About Me</a>
-            </div>
-        </section>
-        
-
         <section id="about-me" class="py-5 grey-section">
             <div class="container">
                 <div class="section-title">
                     <h2>About Me</h2>
-                    <p>Hello! I'm Thomas. I'm a M.Sc. Machine Learning and M.Sc. Engineering Computer Science Student at
-                        KTH Royal Institute of Technology. I have been [doing this/working here] for [X years] and I
-                        specialize in [specific thing you do or a fun fact].</p>
+                    <p>Hello! I'm Thomas. I'm currently persuing a <b>M.Sc. in Machine Learning</b> as well as an 5-year
+                        Engineering degree in <b>Computer Science</b> at KTH Royal Institute of
+                        Technology in Stockholm, Sweden. My projected graduation date is June 2025.</p>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 aos-animate" data-aos="fade-left">
-                        <img src="images/thomas_hiking.jpg" alt="Thomas hiking" class="img-fluid square mb-4">
+                        <img src="images/thomas_sitting.jpg" alt="Thomas sitting" class="img-fluid square mb-4">
                     </div>
                     <div class="col-lg-8 aos-animate" data-aos="fade-right">
-                        <p>When I'm not [working/studying/hobby], you can find me [some fun personal tidbit: "hiking
-                            with my dog", "exploring new coffee shops", "volunteering at the local shelter", etc.].</p>
-                        <p>Feel free to browse my portfolio to see some of the projects I've worked on, or get in touch
-                            if you'd like to collaborate!</p>
+                        <p>Alongside my studies, I am also working part-time as <b>Head of Software Development</b> at
+                            KTH Formula Student in the Driverless division. I am responsible for the development of
+                            software for our Driverless division. This includes developing monitoring software for our
+                            autonomous vehicle, as well as developing software for our simulators. Further, I am also
+                            responsible for our in-house computing, networking, and storage infrastructure.</p>
+                        <p>When I'm not working or studying, you can find me hiking, playing video games, or learning a
+                            new language.</p>
                     </div>
-                </div>
-                <div class="section-title">
-                    <h2>Facts</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quod at ullam voluptate ipsum
-                        debitis inventore eos repellat quaerat temporibus voluptates itaque impedit ipsam sint quos
-                        labore fuga expedita officiis.</p>
                 </div>
                 <div class="section-title">
                     <h2>Skills</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, quod at ullam voluptate ipsum
-                        debitis inventore eos repellat quaerat temporibus voluptates itaque impedit ipsam sint quos
-                        labore fuga expedita officiis.</p>
+                    <p>These are some of my relevant skills that I have acquired over my years as a student and
+                        software developer.</p>
                 </div>
-                
-                <div class="row">
 
-                    
-                    <div class="mb-3 p-2" style="width: 50%;">
-                        <b>HTML</b>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Full Stack</h5>
+                                <ul class="skill-list">
+                                    <li>HTML/CSS/JavaScript</li>
+                                    <li>Bootstrap/jQuery</li>
+                                    <li>Django</li>
+                                    <li>Nginx</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="mb-3 p-2" style="width: 50%;">
-                        <b>CSS</b>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Machine Learning</h5>
+                                <ul class="skill-list">
+                                    <li>TensorFlow</li>
+                                    <li>PyTorch</li>
+                                    <li>Scikit-Learn</li>
+                                    <li>Pandas</li>
+                                    <li>NumPy</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="mb-3 p-2" style="width: 50%;">
-                        <b>JavaScript</b>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Programming Languages</h5>
+                                <ul class="skill-list">
+                                    <li>Python</li>
+                                    <li>Java</li>
+                                    <li>C++</li>
+                                    <li>Haskell</li>
+                                    <li>Prolog</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tools</h5>
+                                <ul class="skill-list">
+                                    <li>Git</li>
+                                    <li>Linux</li>
+                                    <li>Docker</li>
+                                    <li>ROS</li>
+                                    <li>Flutter</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Soft Skills</h5>
+                                <ul class="skill-list">
+                                    <li>Teamwork</li>
+                                    <li>Leadership</li>
+                                    <li>Discipline</li>
+                                    <li>Problem Solving</li>
+                                    <li>Time Management</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <div class="card skill-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Networking</h5>
+                                <ul class="skill-list">
+                                    <li>TCP/IP</li>
+                                    <li>OSI Model</li>
+                                    <li>Subnetting</li>
+                                    <li>Routing</li>
+                                    <li>VPN</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    
-                    
+
+
             </div>
         </section>
 
@@ -142,8 +195,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Resume</h2>
-                    <p>Download my resume in PDF format:</p>
-                    <a href="CV_Thomas_E_Mueller.pdf" target="_blank" rel="noopener noreferrer">Download</a>
+                    <p>Download my <a href="CV_ThomasEMueller.pdf" target="_blank" rel="noopener noreferrer">resume</a></p>
                 </div>
             </div>
         </section>
@@ -160,12 +212,12 @@
             </div>
         </section>
 
-        <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-label"
+        <div class="modal fade" id="project-modal" tabindex="-1" role="dialog" aria-labelledby="project-modal-title"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="project-modal-label">Project Title</h5>
+                        <h5 class="modal-title" id="project-modal-title">Project Title</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -193,32 +245,58 @@
                 <div class="row">
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-music"></i></div>
-                            <h4><a href="#">Music</a></h4>
-                            <p>Music is one of my passions. I enjoy listening to a wide variety of genres, from
-                                classical to rock to electronic.</p>
+                        <div class="interest-container">
+                            <h4 class="interest">Formula 1 <i class="fas fa-car"></i></h4>
+                            <p>I am a very passionate Formula 1 fan, watching each and every session of each race
+                                weekend. This interests stems from my passion for cars and racing, which I have had
+                                since I was a kid. This is obviously also one factor to why I am a part of KTH Formula
+                                Student.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-book"></i></div>
-                            <h4><a href="#">Reading</a></h4>
-                            <p>I love reading books, especially science fiction and fantasy. Some of my favorite authors
-                                include J.R.R. Tolkien, Isaac Asimov, and Neil Gaiman.</p>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="interest-container">
+                            <h4 class="interest">Gaming <i class="fas fa-gamepad"></i></h4>
+                            <p>Another one of my interests is gaming. I have been playing video games since I was a
+                                kid, and I still play a lot of video games today. I mostly play single-player games,
+                                but I also play some multiplayer games with my friends.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                        <div class="icon-box">
-                            <div class="icon"><i class="bx bx-travel"></i></div>
-                            <h4><a href="#">Travel</a></h4>
-                            <p>Traveling is one of my favorite things to do. I love exploring new places, trying new
-                                foods, and learning about different cultures.</p>
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="interest-container">
+                            <h4 class="interest">Hiking <i class="fas fa-hiking"></i></h4>
+                            <p>Being out in nature, hiking, is something I really enjoy. I love the feeling of being
+                                out in the wilderness, away from the city, and just enjoying fresh air. I also love
+                                the feeling of accomplishment when I reach my destination after a long hike.
+                            </p>
                         </div>
                     </div>
 
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="interest-container">
+                            <h4 class="interest">Music <i class="fas fa-music"></i></h4>
+                            <p>I listen to music when I'm working, when I'm studying, when I'm traveling, and when I'm
+                                just relaxing. I listen to a wide variety of music genres, ranging from classical to
+                                techno. I also listen to music in a variety of languages, not only my native languages.
+                                I've played drums earlier in my life, and looking forward, I would like to learn to
+                                compose my own music; just for the fun of music.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="interest-container">
+                            <h4 class="interest">Languages <i class="fas fa-flag"></i></h4>
+                            <p>I spend some of my free time learning new languages online. I guess my interests in
+                                languages stems from my interest in cultures and traveling. Related to my interest in
+                                music, learning languages is a way for me to broaden my horizon and learn about other
+                                cultures and music.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -228,116 +306,15 @@
             <div class="container">
                 <div class="section-title">
                     <h2 class="mb-4">Contact</h2>
-                    <p>Contact details</p>
+                    <p>Feel free to contact me if you have any questions or want to get in touch!</p>
                 </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        work
-                    </div>
-                    <div class="col-lg-6">
-                        school
-                    </div>
-                </div>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt amet doloribus quod.
-                Sequi id vitae rerum quo, laborum iusto autem fugit consectetur. Obcaecati facilis itaque illo
-                rem quasi inventore at.
             </div>
 
         </section>
         <button id="scroll-to-top" class="btn btn-dark d-none"><i class="fas fa-arrow-up"></i></button>
-
-        <script>
-            var scrollToTopButton = document.getElementById("scroll-to-top");
-
-            window.onscroll = function () {
-                if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-                    scrollToTopButton.classList.remove("d-none");
-                } else {
-                    scrollToTopButton.classList.add("d-none");
-                }
-            };
-
-            scrollToTopButton.addEventListener("click", function () {
-                document.body.scrollTop = 0;
-                document.documentElement.scrollTop = 0;
-            });
-        </script>
     </div>
-    
-    <footer>
-        <!-- Your footer content -->
-    </footer>
 
-    <script>
-        const projects = [
-            {
-                title: "Project Title 1",
-                image: "images/kth_formula_student_logo.jpg",
-                description: "Project Description 1"
-            },
-            {
-                title: "Project Title 2",
-                image: "images/kth_formula_student_logo.jpg",
-                description: "Project Description 2"
-            }
-        ];
-
-        const projectContainer = document.getElementById("project-container");
-        projects.forEach((project, index) => {
-            const projectCard = document.createElement("div");
-            projectCard.classList.add("col-md-4", "mb-4");
-            projectCard.innerHTML = `
-            <div class="card aos-animate" data-aos="fade-up" data-aos-delay="200">
-                <div class="position-relative">
-                    <img src="${project.image}" class="card-img-top" alt="Project Image">
-                    <div class="overlay d-flex align-items-center justify-content-center">
-                        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#project-modal" data-project-index="${index}">Learn More</button>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title">${project.title}</h5>
-                </div>
-            </div>
-        `;
-            projectContainer.appendChild(projectCard);
-
-            const modalButton = projectCard.querySelector("button[data-target='#project-modal']");
-            modalButton.addEventListener("click", () => {
-                const modalImage = document.getElementById("project-modal-image");
-                const modalDescription = document.getElementById("project-modal-description");
-                modalImage.src = project.image;
-                modalDescription.textContent = project.description;
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var options = {
-                strings: ["Hey, I'm Thomas"],
-                typeSpeed: 50,
-                backSpeed: 25,
-                backDelay: 1000,
-                startDelay: 500,
-                showCursor: true,
-                cursorChar: '|',
-                loop: false
-            };
-            var options2 = {
-                strings: ["This is my personal website!"],
-                typeSpeed: 50,
-                backSpeed: 25,
-                backDelay: 1000,
-                startDelay: 2000, 
-                showCursor: false,
-                cursorChar: '_',
-                loop: false
-            };
-
-            var typed = new Typed("#typed-output-h1", options);
-            var typed = new Typed("#typed-output-p", options2);
-        });
-    </script>
+    <script src="js/main.js"></script>
 
     <!-- Bootstrap JS and Popper.js CDN (For Bootstrap's JavaScript-based features) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -351,7 +328,14 @@
         AOS.init();
     </script>
 
-    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".mobile-nav-toggle").click(function () {
+                $("#mobileNav").toggleClass("show");
+            });
+        });
+    </script>
+
 </body>
 
 </html>

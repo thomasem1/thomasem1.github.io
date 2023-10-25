@@ -1,8 +1,3 @@
-body {
-    padding-left: 250px;
-    /* This value should match the width of your sidebar */
-}
-
 article {
     display: block;
 }
@@ -15,6 +10,32 @@ article {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+.interest {
+    color: #007bff;
+}
+
+.mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    transition: all 0.4s;
+    outline: none !important;
+    background-color: #149ddd;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
 
 .overlay {
     position: absolute;
@@ -97,6 +118,68 @@ section {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+@media (max-width: 991.98px) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 50%;
+        height: 100%;
+        z-index: 9999;
+        overflow-y: auto;
+        transition: 0.4s;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .sidebar .container {
+        padding: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+.skill-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.skill-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card .card-title {
+    color: #0b6dd5;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.skill-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-list li {
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.skill-list li:before {
+    content: "\2022";
+    color: #007bff;
+    display: inline-block;
+    width: 1em;
+}
+
 .social-links {
     display: flex;
     justify-content: center;
@@ -117,10 +200,8 @@ section {
 
 .social-links a:hover {
     background-color: #007bff;
-    /* Change the background color on hover */
 }
 
 .grey-section {
     background-color: #f9f9f9;
-    /* Light gray background for contrast */
 }
