@@ -17,59 +17,64 @@
 </head>
 
 <body>
-    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
-
-    <aside class="sidebar bg-dark text-white py-4 collapse d-xl-block" id="mobileNav">
-        <div class="container">
-            <img src="images/CVbild.jpg" alt="Profile Picture"
-                class="profile-image rounded-circle border border-white mb-4">
-            <h4 class="text-center mb-2">Thomas E. Mueller</h4>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/thomas-eriksson-mueller-572196237/" target="_blank">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/thomasem1" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
+    <i id="mobile-nav-toggle" class="mobile-nav-toggle d-xl-none fas fa-bars"></i>
+    
+    <header id="header">
+        <div class="d-flex flex-column text-white py-4">
+            <div class="profile">
+                <img src="images/CVbild.jpg" alt="Profile Picture"
+                class="profile-image rounded-circle">
+                <h4 class="text-center mb-2">Thomas E. Mueller</h4>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/thomas-eriksson-mueller-572196237/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/thomasem1" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
             </div>
-            <ul class="nav flex-column mt-4">
-                <li class="nav-item mb-2">
-                    <a href="#about-me" class="nav-link text-white">
-                        <i class="fas fa-user mr-2"></i>About Me
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="#resume" class="nav-link text-white">
-                        <i class="fas fa-file-alt mr-2"></i>Resume
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="#projects" class="nav-link text-white">
-                        <i class="fas fa-code mr-2"></i>Projects
-                    </a>
-                </li>
-                <li class="nav-item mb-2">
-                    <a href="#interests" class="nav-link text-white">
-                        <i class="fas fa-heart mr-2"></i>Interests
-                    </a>
-                </li>
-                <li class="nav-item mb-4">
-                    <a href="#contact" class="nav-link text-white">
-                        <i class="fas fa-envelope mr-2"></i>Contact
-                    </a>
-                </li>
-            </ul>
+            
+            <nav id="navbar" class="nav-menu navbar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#about-me" class="nav-link scrollto">
+                            <i class="fas fa-user"></i>About Me
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link scrollto">
+                            <i class="fas fa-file-alt"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link scrollto">
+                            <i class="fas fa-code"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#interests" class="nav-link scrollto">
+                            <i class="fas fa-heart"></i>Interests
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link scrollto">
+                            <i class="fas fa-envelope"></i>Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </aside>
-  
-    <section class="hero bg-primary text-white text-center d-flex justify-content-center align-items-center">
+    </header>
+    
+    <section id="hero" class="text-center d-flex justify-content-center align-items-center">
         <div>
             <h1><span id="typed-output-h1"></span></h1>
             <p><span id="typed-output-p"></span></p>
             <a href="#about-me" class="btn btn-light" onclick="smoothScroll(event)">About Me</a>
         </div>
     </section>
-
+    
     <div id="main">
         <section id="about-me" class="py-5 grey-section">
             <div class="container">
@@ -93,7 +98,7 @@
                             new language.</p>
                     </div>
                 </div>
-                <div class="section-title">
+                <div class="section-title mt-5">
                     <h2>Skills</h2>
                     <p>These are some of my relevant skills that I have acquired over my years as a student and
                         software developer.</p>
@@ -195,7 +200,8 @@
             <div class="container">
                 <div class="section-title">
                     <h2>Resume</h2>
-                    <p>Download my <a href="CV_ThomasEMueller.pdf" target="_blank" rel="noopener noreferrer">resume</a></p>
+                    <p>Download my <a href="CV_ThomasEMueller.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+                    </p>
                 </div>
             </div>
         </section>
@@ -204,7 +210,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>My Projects</h2>
-                    <p>This is an overview of the projects I have been working on, press one of the images to read more
+                    <p>This is an overview of the projects I have been working on, click on one of the images to read more
                         about the project!</p>
                 </div>
                 <div class="row" id="project-container">
@@ -311,7 +317,7 @@
             </div>
 
         </section>
-        <button id="scroll-to-top" class="btn btn-dark d-none"><i class="fas fa-arrow-up"></i></button>
+        <button id="scroll-to-top" class="btn"><i class="fas fa-arrow-up"></i></button>
     </div>
 
     <script src="js/main.js"></script>
@@ -322,20 +328,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            $(".mobile-nav-toggle").click(function () {
-                $("#mobileNav").toggleClass("show");
-            });
-        });
-    </script>
-
 </body>
 
 </html>
