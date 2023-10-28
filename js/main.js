@@ -79,10 +79,13 @@ document.addEventListener("DOMContentLoaded", function () {
     loop: false
   };
 
-  var typed = new Typed("#typed-output-h1", options);
-  var typed = new Typed("#typed-output-p", options2);
+  var typed1 = new Typed("#typed-output-h1", options);
+  var typed2 = new Typed("#typed-output-p", options2);
 });
 
+/**
+ * Prevents default anchor click behavior, scrolls to element smoothly
+ */
 function smoothScroll(event) {
   // Prevent default anchor click behavior
   event.preventDefault();
@@ -130,17 +133,6 @@ document.querySelector('.mobile-nav-toggle').addEventListener('click', function 
 });
 
 /**
- * Scrolls to an element with header offset
- */
-const scrollto = (el) => {
-  let elementPos = document.querySelector(el).offsetTop;
-  window.scrollTo({
-    top: elementPos,
-    behavior: 'smooth'
-  });
-};
-
-/**
  * Scrool with ofset on links with a class name .scrollto
  */
 let scrollLinks = document.querySelectorAll('.scrollto');
@@ -152,11 +144,12 @@ scrollLinks.forEach(scrollLink => {
       let body = document.querySelector('body');
       if (body.classList.contains('mobile-nav-active')) {
         body.classList.remove('mobile-nav-active');
-        let navbarToggle = document.querySelector('.mobile-nav-toggle');
-        navbarToggle.classList.toggle('bi-list');
-        navbarToggle.classList.toggle('bi-x');
+        document.querySelector('.mobile-nav-toggle').classList.toggle('mobile-nav-active');
       }
-      scrollto(this.hash);
+      window.scrollTo({
+        top: document.querySelector(this.hash).offsetTop,
+        behavior: 'smooth'
+      });
     }
   }, true);
 });
