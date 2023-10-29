@@ -5,17 +5,17 @@ const projects = [
   {
     title: "KTH Formula Student",
     image: "images/kth_formula_student_logo.jpg",
-    description: "I've been a part of KTH Formula Student since 2022. I started out as a software developer in the Driverless division, and I am now the Head of Software Development in the Driverless division. Being Head of Software Development entails developing monitoring software for our autonomous vehicle, as well as developing software for our simulators. Further, I am also responsible for our in-house computing, networking, and storage infrastructure. Feel free to visit <a href=\"https://kthformulastudent.se/\">our website</a>"
+    description: "I've been a part of KTH Formula Student since 2022. I started out as a software developer in the Driverless division, and I am now the Head of Software Development in the Driverless division. Being Head of Software Development entails developing monitoring software for our autonomous vehicle, as well as developing software for our simulators. Further, I am also responsible for our in-house computing, networking, and storage infrastructure. Feel free to visit our website on https://kthformulastudent.se/."
   },
   {
     title: "Flutter Game App",
     image: "images/flutter.png",
-    description: "I am currently working with a friend on developing a game app using Flutter. The game is a simple 2D game where the player controls a character and tries to avoid obstacles. The game is developed using Flutter and Flame. The game is currently in development, and we am planning to release it on the Google Play Store and the Apple App Store in the near future. The inspiration to this project came from a Flame workshop we attended in fall of 2023"
+    description: "I am currently working with a friend on developing a game app using Flutter. The game is a simple 2D game where the player controls a character and tries to avoid obstacles. The game is developed using Flutter and Flame. The game is currently in development, and we am planning to release it on the Google Play Store and the Apple App Store in the near future. The inspiration to this project came from a Flame workshop we attended in fall of 2023."
   },
   {
     title: "Museum Exhibition App",
     image: "images/tekniska.png",
-    description: "As part of a course in Software Engineering, I together with 7 other students, developed an app for the Tekniska Museet in Stockholm for their Zero City exhibition. The app was developed using Flutter. This project also included leadership and teamwork, we had a rotating Scrum agile development team, so I served as Scrum Master and Project Owner during different sprints. During the remaining sprints, I was a developer. This project was conducted from the fall of 2021 to the spring of 2022"
+    description: "As part of a course in Software Engineering, I together with 7 other students, developed an app for the Tekniska Museet in Stockholm for their Zero City exhibition. The app was developed using Flutter. This project also included leadership and teamwork, we had a rotating Scrum agile development team, so I served as Scrum Master and Project Owner during different sprints. During the remaining sprints, I was a developer. This project was conducted from the fall of 2021 to the spring of 2022."
   },
   {
     title: "Internet Programming Game",

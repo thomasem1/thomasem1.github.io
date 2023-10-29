@@ -25,6 +25,7 @@ article {
     text-align: center;
 }
 
+/* SCROLL TO TOP BUTTON */
 #scroll-to-top {
     position: fixed;
     bottom: 40px;
@@ -35,6 +36,7 @@ article {
     border-radius: 50%;
 }
 
+/* SECTIONS */
 section {
     padding: 60px 0;
     overflow: hidden;
@@ -91,6 +93,22 @@ section {
 
 .overlay:hover {
     opacity: 1;
+}
+
+.card-img-top:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@media (max-width: 767px) {
+    .card-img-top {
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
+    }
+    .card-img-top:active {
+        opacity: 1;
+    }
 }
 
 /* SKILLS */
